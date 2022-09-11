@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace, sans-serif;
+}
+
+html {
+  font-size: 20px;
+}
+
+button {
+  background: #111;
+  color: #fff;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  width: 50%;
+  cursor: pointer;
+  transition: .15s ease-in-out;
+  text-transform: uppercase;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.slider {
+  width: 30rem;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: #ddd solid .2rem;
+  display: flex;
+  align-items: center;
+}
+
+.slider__line {
+  display: flex;
+  /*transform: translateX(0);*/
+}
+
+.slider__object {
+  width: 30rem;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.dots > div {
+  width: 1rem;
+  aspect-ratio: 1/1;
+  background: #ccc;
+  transition: .15s ease-in-out;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dots > div:hover {
+  opacity: .8;
+}
+
+.dots > div.active {
+  background: #444;
+  transform: scale(1.1);
+}
